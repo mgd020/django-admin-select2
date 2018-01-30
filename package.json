@@ -1,9 +1,10 @@
 {
-  "name": "admin_select2",
+  "name": "django_admin_select2",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
-  "license": "ISC",
+  "description": "Enable select2 for Django admin select inputs",
+  "author": "Matthew Downey",
+  "repository": "https://github.com/mgd020/django-admin-select2",
+  "license": "MIT",
   "devDependencies": {
     "select2": "^4.0.6-rc.1"
   }

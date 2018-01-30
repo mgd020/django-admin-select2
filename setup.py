@@ -8,7 +8,7 @@ try:
 
     def get_long_description():
         return convert('README.md', 'rst')
-except ImportError:
+except Exception:
     def get_long_description():
         pass
 
@@ -21,5 +21,10 @@ setup(
     author='Matthew Downey',
     author_email='mgd020@gmail.com',
     url='https://github.com/mgd020/django-admin-select2',
-    packages=['django_admin_select2'],
+    packages=[
+        'django_admin_select2',
+    ],
+    package_dir={
+        'django_admin_select2': ['*'],
+    },
 )
