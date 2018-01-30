@@ -2,3 +2,6 @@
 env
 test_app/env
 node_modules
+dist
+*.egg-info
+MANIFEST

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from distutils.core import setup
+import os
 
 
 try:
@@ -11,6 +12,15 @@ try:
 except Exception:
     def get_long_description():
         pass
+
+
+def get_package_data(package):
+    start = len(package) + 1  # strip package name
+    for path, dirs, files in os.walk(package):
+        for file in files:
+            if file.startswith('.') or file.endswith('.py') or file.endswith('.pyc'):
+                continue
+            yield os.path.join(path[start:], file)
 
 
 setup(
@@ -25,6 +35,6 @@ setup(
         'django_admin_select2',
     ],
     package_data={
-        'django_admin_select2': ['*'],
+        'django_admin_select2': list(get_package_data('django_admin_select2')),
     },
 )
