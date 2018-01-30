@@ -37,4 +37,5 @@ setup(
     package_data={
         'django_admin_select2': list(get_package_data('django_admin_select2')),
     },
+    keywords=['django', 'django-admin', 'select2'],
 )
