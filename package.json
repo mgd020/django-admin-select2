@@ -1,0 +1,10 @@
+{
+  "name": "admin_select2",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "select2": "^4.0.6-rc.1"
+  }
+}

@@ -1,0 +1,3 @@
+*.pyc
+env
+test_app/env

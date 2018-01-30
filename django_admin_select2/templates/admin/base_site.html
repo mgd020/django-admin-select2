@@ -1,0 +1,34 @@
+{% extends "admin/base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <link href="{% static 'django_admin_select2/css/select2.min.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+    {% if not media %}
+        <script src="{% static 'admin/js/vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'admin/js/jquery.init.js' %}"></script>
+    {% endif %}
+    <script>window.jQuery = window.$ = django.jQuery;</script>
+    <script src="{% static 'django_admin_select2/js/select2.min.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            {# timeout required because filtered is added after load #}
+            setTimeout(function() {
+                $('select:not(.filtered)').select2();
+            }, 0);
+        });
+    </script>
+{% endblock %}
