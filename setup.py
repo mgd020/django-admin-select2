@@ -24,7 +24,7 @@ setup(
     packages=[
         'django_admin_select2',
     ],
-    package_dir={
+    package_data={
         'django_admin_select2': ['*'],
     },
 )
