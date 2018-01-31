@@ -4,6 +4,8 @@ Enable select2 for Django admin `select` inputs.
 
 Automatically applies to all `select`s, excluding filtered selects (e.g. `auth.User.groups`).
 
+Tested with Django versions 1.11 and 2.0.
+
 ## Installation
 
 ```shell

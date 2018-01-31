@@ -27,7 +27,7 @@
         $(document).ready(function() {
             {# timeout required because filtered is added after load #}
             setTimeout(function() {
-                $('select:not(.filtered)').select2();
+                $('select:not(.filtered):not(.admin-autocomplete)').select2();
             }, 0);
         });
     </script>

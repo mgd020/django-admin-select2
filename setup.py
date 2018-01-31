@@ -25,7 +25,7 @@ def get_package_data(package):
 
 setup(
     name='django-admin-select2',
-    version='1.0',
+    version='1.0.1',
     description='Enable select2 for Django admin select inputs',
     long_description=get_long_description(),
     author='Matthew Downey',

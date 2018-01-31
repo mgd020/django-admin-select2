@@ -1,6 +1,6 @@
 {
   "name": "django_admin_select2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enable select2 for Django admin select inputs",
   "author": "Matthew Downey",
   "repository": "https://github.com/mgd020/django-admin-select2",
