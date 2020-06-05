@@ -1,3 +1,3 @@
-Django==1.11.28
+Django==1.11.29
 pytz==2017.3
 git+https://github.com/mgd020/django-admin-select2.git#egg=django_admin_select2
